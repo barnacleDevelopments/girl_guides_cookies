@@ -1,0 +1,16 @@
+// create a guide class // 
+Properties: name, boxesSold 
+
+// functions // 
+checkPrize(cookieBoxesSold) - gets the prize according to cookies sold
+
+getAverage(cookieBoxesSold) - calculates the average amount of boxes sold
+
+createQuestionSet() { - function that asks a set of questions
+    askQuestion1()
+    askQuestion2()
+}
+
+askMultiQuestionSet(numOfGuides) - takes the number of guides and asks
+                                   a set of questions for each 
+
