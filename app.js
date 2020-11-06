@@ -77,7 +77,6 @@ class GuideGroup {
      }
 
     if(guide.boxesSold === this.getMostBoxesSold()) {
-      mostBoxes = guide.boxesSold
       guide.prize = "Trip to Girl Guide Jamboree in Aruba"
       return guide
     }
@@ -97,12 +96,11 @@ class GuideGroup {
   }
 
   logPrizes = () => {
-    let table = `Guide        Prizes Won: \n----------------------------------------------\n`
+    let table = `Guide:        Prizes Won: \n----------------------------------------------\n`
     this.setPrizes()
     this.group.forEach(guide => {
      table = table.concat(`${guide.name}     - ${guide.prize} \n`)
     })
-    console.log(this.group)
     console.log(table)
   }
  
@@ -189,7 +187,9 @@ const createGuides = (anwsers) => {
   return group
 }
 
-let anwsers = doItAndGather(4, (num) => {
+let numberOfGuides = readlineSync.question("Enter the number of guides selling cookies: ")
+
+let anwsers = doItAndGather(numberOfGuides, (num) => {
   return askGuideQuestions(num + 1, guideQuestions)
 })
 
