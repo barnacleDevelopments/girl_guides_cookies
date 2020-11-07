@@ -55,18 +55,6 @@ class GuideGroup {
       }
     });
     return mostBoxes
-  }
-
-  checkDoubles = () => {
-    let lastGuide = {}
-    this.group = this.group.map(guide => {
-      if(lastGuide.prize === "Trip to Girl Guide Jamboree in Aruba") {
-        guide.prize = "Tie for the trip"
-        return guide
-      }
-      lastGuide = guide
-      return guide
-    })
   } 
 
   setPrizes() {
@@ -92,7 +80,6 @@ class GuideGroup {
     }
      return guide
    })
-   this.checkDoubles()
   }
 
   logPrizes = () => {
